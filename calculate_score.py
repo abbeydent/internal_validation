@@ -39,6 +39,10 @@ prediction = linear_machine.predict(data_test)
 
 print(prediction)
 
+plt.scatter(target_test, prediction)
+plt.xlabel('target test')
+plt.ylabel('prediction')
 
+plt.savefig("scatter_test_prediction.png")
 
 
