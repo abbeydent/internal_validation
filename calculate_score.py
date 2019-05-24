@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import linear_model
 from matplotlib import pyplot as plt 
 
+from sklearn import metrics
 
 dataset = pd.read_csv("dataset.csv")
 
@@ -44,5 +45,7 @@ plt.xlabel('target test')
 plt.ylabel('prediction')
 
 plt.savefig("scatter_test_prediction.png")
+
+print(metrics.r2_score(target_test, prediction))
 
 
